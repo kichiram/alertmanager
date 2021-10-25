@@ -53,7 +53,7 @@ http://<ホスト名>:9093
 ```
 下記のように表示されれば成功です。
 ![image](https://user-images.githubusercontent.com/91726058/138649757-f4313d5e-d8c3-448b-9ff5-46617f53e44b.png)
-* ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。余談ですが、alertmanagerはIPアドレスで接続するとダメみたいです。
+* ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。
 ##### 2.3. 実行中を中断します。
 EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
