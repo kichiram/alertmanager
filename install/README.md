@@ -59,9 +59,10 @@ EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
 daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
-ファイルを/etc/prometheus/alertmanagerディレクトリを作成し、その配下に移動します。
+/etc/prometheus/alertmanagerディレクトリを作成し、ファイルをその配下に移動します。
 ```
-$ sudo mv ~/alertmanager-0.23.0.linux-amd64 /etc/prometheus/alertmanager
+$ sudo mkdir /etc/prometheus/alertmanager
+$ sudo mv ~/alertmanager-0.23.0.linux-amd64/* /etc/prometheus/alertmanager
 $ ls /etc/prometheus/alertmanager
 alertmanager  alertmanager.yml  amtool  data  LICENSE  NOTICE
 ```
