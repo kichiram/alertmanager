@@ -1,16 +1,19 @@
+global:
+  smtp_smarthost: 127.0.0.1:25
 route:
   group_by: ['alertname']
   repeat_interval: 1h
+  receiver: warning
   routes:
   - receiver: critical
     group_by: ['alertname', 'instance']
     match:
       severity: critical
-    continue:false
+    continue: false
   - receiver: warning
     match:
       severity: warning
-    continue:false   
+    continue: false   
 receivers:
 - name: 'critical'
   email_configs:
