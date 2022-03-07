@@ -5,14 +5,15 @@ route:
   repeat_interval: 1h
   receiver: ec2-user
   routes:
-  - receiver: root
-    group_by: ['alertname', 'instance']
-    match:
-      alertname: (serviceDown|*Usage)
+  - match_re:
+      alertname: (serviceDown|.*Usage$)
+    receiver: root
+    repeat_interval: 1d
+    group_by: [alertname, instance]
     continue: true
-  - receiver: operator
-    match:
+  - match:
       severity: critical
+    receiver: operator
     continue: false
 receivers:
 - name: 'root'
