@@ -3,25 +3,31 @@ global:
 route:
   group_by: ['alertname']
   repeat_interval: 1h
-  receiver: warning
+  receiver: ec2-user
   routes:
-  - receiver: critical
+  - receiver: root
     group_by: ['alertname', 'instance']
+    match:
+      alertname: (serviceDown|*Usage)
+    continue: true
+  - receiver: operator
     match:
       severity: critical
     continue: false
-  - receiver: warning
-    match:
-      severity: warning
-    continue: false   
 receivers:
-- name: 'critical'
+- name: 'root'
   email_configs:
   - send_resolved: false
-    to: ec2-user@localhost
+    to: root@localhost
     from: ec2-user@localhost
     html: ''
-- name: 'warning'
+- name: 'operator'
+  email_configs:
+  - send_resolved: false
+    to: operator@localhost
+    from: ec2-user@localhost
+    html: ''
+- name: 'ec2-user'
   email_configs:
   - send_resolved: false
     to: ec2-user@localhost
