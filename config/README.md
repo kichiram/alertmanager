@@ -7,9 +7,9 @@
 #### 2.1. receiver
 アラート受信先を記述します。
 #### 2.2. group_by
-グルーピングを設定します。
+アラート通知のグルーピングを設定します。
 #### 2.3. match/match_re
-条件を指定します。
+アラート通知の条件を指定します。
 #### 2.4. repeat_interval
 再通知するまでの間隔を指定します。（アラートが消えた場合はリセットされます）
 ### 3. [receiver](https://prometheus.io/docs/alerting/latest/configuration/#receiver)
