@@ -1,5 +1,6 @@
 global:
   smtp_smarthost: 127.0.0.1:25
+  smtp_from: root@localhost
 route:
   group_by: ['alertname']
   repeat_interval: 1h
@@ -20,13 +21,11 @@ receivers:
   email_configs:
   - send_resolved: false
     to: root@localhost
-    from: ec2-user@localhost
     html: ''
 - name: 'operator'
   email_configs:
   - send_resolved: false
     to: operator@localhost
-    from: ec2-user@localhost
     html: ''
 - name: 'ec2-user'
   email_configs:
