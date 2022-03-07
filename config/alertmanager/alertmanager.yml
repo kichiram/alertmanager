@@ -18,12 +18,12 @@ receivers:
 - name: 'critical'
   email_configs:
   - send_resolved: false
-    to: ec2_user@localhost
-    from: ec2_user@localhost
+    to: ec2-user@localhost
+    from: ec2-user@localhost
     html: ''
 - name: 'warning'
   email_configs:
   - send_resolved: false
-    to: ec2_user@localhost
-    from: ec2_user@localhost
+    to: ec2-user@localhost
+    from: ec2-user@localhost
     html: ''
