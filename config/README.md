@@ -13,4 +13,4 @@
 #### 2.4. repeat_interval
 再通知するまでの間隔を指定します。（アラートが消えた場合はリセットされます）
 ### 3. [receiver](https://prometheus.io/docs/alerting/latest/configuration/#receiver)
-アラート受信先を設定します。emal/slack/webhook/PagerDutyなどへの通知が可能です。
+アラート受信先を設定します。emal / slack / webhook / PagerDutyなどへの通知が可能です。
