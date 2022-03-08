@@ -26,7 +26,7 @@ receivers:
 - name: 'operator'
   email_configs:
   - send_resolved: false
-    to: operator@localhost
+    to: ec2-user@localhost
     html: ''
 - name: 'ec2-user'
   email_configs:
