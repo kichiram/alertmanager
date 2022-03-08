@@ -49,7 +49,7 @@ Mar 08 00:25:03 ip-172-31-39-113.ap-northeast-1.compute.internal alertmanager[10
 http://<ホスト名>:9093/#/status
 ```
 # prometheusの設定ファイルにalertmanagerの指定を追加
-[alerting](https://github.com/kichiram/prometheus/tree/main/config/alerting])
+[alerting](https://github.com/kichiram/prometheus/tree/main/config/alerting)
 
 # alert確認
 ## alertmanagerで確認
