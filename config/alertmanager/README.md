@@ -62,3 +62,4 @@ http://<ホスト名>:9093/#/alerts
 $ ls /var/spool/mail
 ec2-user  root  rpc
 ```
+ただ、残念ながらメール本文は見れません。。。
