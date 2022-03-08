@@ -60,5 +60,5 @@ http://<ホスト名>:9093/#/alerts
 下記ディレクトリにユーザ名のファイルが作成されます。sudo catでメール確認できます。
 ```
 $ ls /var/spool/mail
-ec2-user  opeerator  root  rpc
+ec2-user  root  rpc
 ```
