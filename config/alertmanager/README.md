@@ -57,7 +57,7 @@ http://<ホスト名>:9093/#/status
 http://<ホスト名>:9093/#/alerts
 ```
 ## mailで確認
-下記ディレクトリにユーザ名のファイルが作成されます。catでメール確認できます。
+下記ディレクトリにユーザ名のファイルが作成されます。sudo catでメール確認できます。
 ```
 $ ls /var/spool/mail
 ec2-user  opeerator  root  rpc
