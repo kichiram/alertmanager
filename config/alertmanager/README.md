@@ -48,6 +48,20 @@ Mar 08 00:25:03 ip-172-31-39-113.ap-northeast-1.compute.internal alertmanager[10
 ```
 http://<ホスト名>:9093/#/status
 ```
+# メール確認準備
+#### 1. mailコマンドインストール
+メールを確認するためのコマンドをインストールします。
+```
+sudo yum install -y mailx
+```
+使い方：https://monologu.com/mail-command/
+#### 2. 既存のメール削除
+古いメールが残っているとわかりにくいので一旦削除します。
+```
+sudo rm /var/spool/mail/ec2-user
+sudo rm /var/spool/mail/root
+```
+
 # prometheusの設定ファイルにalertmanagerの指定を追加
 [alerting](https://github.com/kichiram/prometheus/tree/main/config/alerting)
 
@@ -57,9 +71,11 @@ http://<ホスト名>:9093/#/status
 http://<ホスト名>:9093/#/alerts
 ```
 ## mailで確認
-下記ディレクトリにユーザ名のファイルが作成されます。sudo catでメール確認できます。
+ec2-userのメール確認
 ```
-$ ls /var/spool/mail
-ec2-user  root  rpc
+$ mail
 ```
-ただ、残念ながらメール本文は見れません。。。
+rootのメール確認
+```
+$ sudo mail -u root
+```
