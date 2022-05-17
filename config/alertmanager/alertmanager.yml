@@ -23,14 +23,17 @@ receivers:
   - send_resolved: false
     to: root@localhost
     html: ''
+    text: '{{ template "pushover.default.message" . }}'
 - name: 'operator'
   email_configs:
   - send_resolved: false
     to: ec2-user@localhost
     html: ''
+    text: '{{ template "pushover.default.message" . }}'
 - name: 'ec2-user'
   email_configs:
   - send_resolved: false
     to: ec2-user@localhost
     from: ec2-user@localhost
     html: ''
+    text: '{{ template "pushover.default.message" . }}'
