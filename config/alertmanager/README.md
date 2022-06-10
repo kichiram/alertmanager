@@ -63,7 +63,7 @@ sudo rm /var/spool/mail/root
 ```
 
 # prometheusの設定ファイルにalertmanagerの指定を追加
-[alerting](https://github.com/kichiram/prometheus/tree/main/config/alerting)
+[alerting](https://github.com/kichiram/prometheus/tree/main/config/alerting)でprometheus.ymlを入れ替えます。
 
 # alert確認
 ## alertmanagerで確認
